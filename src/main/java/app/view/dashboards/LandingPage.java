@@ -121,8 +121,6 @@ public class LandingPage extends BorderPane {
         ScrollPane scrollPane = new ScrollPane(centerBorderPane);
 
         centerBorderPane.setStyle("-fx-background-color: lightgray;");
-        scrollPane.setStyle("-fx-background-color: red;");
-
 
         centerBorderPane.setAlignment(Pos.CENTER);
 
