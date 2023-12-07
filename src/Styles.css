@@ -1,0 +1,6 @@
+.HomeButton {
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Koulen">
+    font-family: 'Koulen';
+    -fx-font-size: 40px;
+    -fx-padding: 0;
+}
