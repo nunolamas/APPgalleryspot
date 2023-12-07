@@ -4,6 +4,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Screen;
 
 
 import java.io.File;
@@ -23,7 +24,7 @@ import java.util.Random;
                 Image randomImage = new Image(randomImageFile.toURI().toString());
 
                 ImageView imageView = new ImageView(randomImage);
-                imageView.setFitWidth(270);
+                imageView.setFitWidth(((Screen.getPrimary().getVisualBounds().getWidth())-260)/5);
                 imageView.setPreserveRatio(true);
 
                 return imageView;

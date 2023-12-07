@@ -33,7 +33,7 @@ public class LandingPage extends BorderPane {
 
         Image bigImage = new Image("images/4eaeecc3d2a5820001006e93.jpg");
         imageViewForBigImage.setImage(bigImage);
-        imageViewForBigImage.setFitWidth(1525);
+        imageViewForBigImage.setFitWidth(Screen.getPrimary().getVisualBounds().getWidth()-60);
         imageViewForBigImage.setFitHeight(800);
 
         centerPaneForBigImage.getChildren().add(imageViewForBigImage);
@@ -122,6 +122,9 @@ public class LandingPage extends BorderPane {
 
         centerBorderPane.setStyle("-fx-background-color: lightgray;");
 
+        centerBorderPane.setAlignment(Pos.CENTER);
+
+        scrollPane.setMaxWidth(Screen.getPrimary().getVisualBounds().getWidth());
         setCenter(scrollPane);
 
 // * ------------- * LAYOUT RIGHT * ----- *
