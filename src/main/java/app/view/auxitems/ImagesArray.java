@@ -24,7 +24,7 @@ import java.util.Random;
                 Image randomImage = new Image(randomImageFile.toURI().toString());
 
                 ImageView imageView = new ImageView(randomImage);
-                imageView.setFitWidth(((Screen.getPrimary().getVisualBounds().getWidth())-260)/5);
+                imageView.setFitWidth(((Screen.getPrimary().getVisualBounds().getWidth())-320)/5);
                 imageView.setPreserveRatio(true);
 
                 return imageView;

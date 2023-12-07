@@ -4,3 +4,6 @@
     -fx-font-size: 40px;
     -fx-padding: 0;
 }
+.scroll-pane > .viewport {
+   -fx-background-color: red;
+}
