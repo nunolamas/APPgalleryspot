@@ -16,9 +16,9 @@ import javafx.scene.text.TextAlignment;
 
 public class Thumbnails extends BorderPane{
 
-        private final ArtistPage artistPage = new ArtistPage();
-        private final ArtworkPage artworkPage = new ArtworkPage();
-        private final GalleryPage galleryPage = new GalleryPage();
+        //private final ArtistPage artistPage = new ArtistPage();
+        //private final ArtworkPage artworkPage = new ArtworkPage();
+        //private final GalleryPage galleryPage = new GalleryPage();
         //rivate final ExploreArtworks exploreArtworks = new ExploreArtworks();
 
 
@@ -38,7 +38,7 @@ public class Thumbnails extends BorderPane{
 
             thumbnail.setEffect(dropShadow);
 
-            CornerRadii roundedCorners = new CornerRadii(10);
+            CornerRadii roundedCorners = new CornerRadii(0,0,10,10, false);
             BackgroundFill backgroundFill = new BackgroundFill(Color.WHITE, roundedCorners, javafx.geometry.Insets.EMPTY);
             Background background = new Background(backgroundFill);
 
@@ -84,17 +84,17 @@ public class Thumbnails extends BorderPane{
             return thumbnail;
     }
 
-        public void showArtistPage() {
+        /*public void showArtistPage() {
                 this.setCenter(artistPage);
-        }
+        }*/
 
-        public void showArtworkPage() {
+       /* public void showArtworkPage() {
                 this.setCenter(artworkPage);
-        }
+        }*/
 
-        public void showGalleryPage() {
-                this.setCenter(galleryPage);
-        }
+        //public void showGalleryPage() {
+               // this.setCenter(galleryPage);
+        //}
 
        /* public void showExploreArtworks() {
 
