@@ -11,6 +11,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Screen;
 
@@ -55,7 +56,7 @@ public class LandingPage extends BorderPane {
 
         boxForBarOfRadioButtons.getChildren().add(barForRadioButtons);
 
-// * ------------------------------------------------------------------------------------- * THUMBNAILS * ----- *
+// * ------------------------------------------------------------------------------------- * EMPTY SPACE * ----- *
 
         VBox emptyspace3 = new VBox(100);
 
@@ -66,6 +67,8 @@ public class LandingPage extends BorderPane {
         midLine.setAlignment(Pos.CENTER);
 
         VBox emptyspace4 = new VBox(100);
+
+// * ------------------------------------------------------------------------------------- * THUMBNAILS * ----- *
 
         VBox boxOfThumbnails = new VBox(10);
         HBox rowOfThumbnails1 = new HBox(30);
@@ -95,14 +98,13 @@ public class LandingPage extends BorderPane {
         VBox emptyspace5 = new VBox(100);
 
         VBox boxForShowMoreText = new VBox(10);
-        Text showMoreTextArea = new Text("Show more Artworks");
-
+        Text showMoreTextArea = new Text("refresh artworks");
+        showMoreTextArea.setFont(new Font("Trebuchet MS", 12));
         boxForShowMoreText.getChildren().add(showMoreTextArea);
         boxForShowMoreText.setAlignment(Pos.CENTER);
 
         VBox bottline = new VBox(10);
         Line line3 = new Line(0, 0, 1000, 0);
-
         bottline.getChildren().add(line3);
         bottline.setAlignment(Pos.CENTER);
 
@@ -110,23 +112,18 @@ public class LandingPage extends BorderPane {
 
         VBox boxForShowMoreButton = new VBox(100);
         Button showMore = new Button("V");
-
         boxForShowMoreButton.getChildren().add(showMore);
         boxForShowMoreButton.setAlignment(Pos.CENTER);
 
         centerBorderPane.getChildren().addAll(emptyspace2, centerPaneForBigImage, boxForBarOfRadioButtons, emptyspace3, midLine, emptyspace4, boxOfThumbnails, emptyspace5, boxForShowMoreText, bottline, boxForShowMoreButton, emptyspace6);
         centerBorderPane.setPrefWidth(Screen.getPrimary().getVisualBounds().getWidth()-55);
         centerBorderPane.setPrefHeight(3000);
-
-        ScrollPane scrollPane = new ScrollPane(centerBorderPane);
-
         centerBorderPane.setStyle("-fx-background-color: lightgray;");
-        scrollPane.setStyle("-fx-background-color: red;");
-
-
         centerBorderPane.setAlignment(Pos.CENTER);
 
+        ScrollPane scrollPane = new ScrollPane(centerBorderPane);
         scrollPane.setMaxWidth(Screen.getPrimary().getVisualBounds().getWidth());
+
         setCenter(scrollPane);
 
 // * ------------- * LAYOUT RIGHT * ----- *

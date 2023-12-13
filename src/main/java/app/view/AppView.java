@@ -7,6 +7,7 @@ import app.view.objectpage.GalleryPage;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Font;
 import javafx.stage.Screen;
@@ -18,9 +19,9 @@ public class AppView extends BorderPane {
     private final ExploreArtworks exploreArtworks = new ExploreArtworks();
     private final ExploreGalleries exploreGalleries = new ExploreGalleries();
     private final ExploreShows exploreShows = new ExploreShows();
-    private final ArtistPage artistPage = new ArtistPage();
-    private final ArtworkPage artworkPage = new ArtworkPage();
-    private final GalleryPage galleryPage = new GalleryPage();
+    //private final ArtistPage artistPage = new ArtistPage();
+    //private final ArtworkPage artworkPage = new ArtworkPage();
+    //private final GalleryPage galleryPage = new GalleryPage();
     private final SlideShowPage slideShowPage = new SlideShowPage();
 
 
@@ -59,6 +60,10 @@ public class AppView extends BorderPane {
                     TextField searchField = new TextField("Search by...");
                         searchField.setFont(new Font("Trebuchet MS", 12));
                         searchField.setPrefWidth((Screen.getPrimary().getVisualBounds().getWidth())-755);
+                        CornerRadii roundedCorners1 = new CornerRadii(4);
+                        BackgroundFill backgroundFill2 = new BackgroundFill(Color.LIGHTGRAY, roundedCorners1, javafx.geometry.Insets.EMPTY);
+                        Background backgroundGray = new Background(backgroundFill2);
+                        searchField.setBackground(backgroundGray);
 
                 HBox tabs = new HBox(10);
                     Button buttonArtworksTab = new Button("Artworks");
@@ -148,7 +153,7 @@ public class AppView extends BorderPane {
         this.setCenter(slideShowPage);
     }
 
-    public void showArtistPage() {
+    /*public void showArtistPage() {
         this.setCenter(artistPage);
     }
 
@@ -158,5 +163,5 @@ public class AppView extends BorderPane {
 
     public void showGalleryPage() {
         this.setCenter(galleryPage);
-    }
+    }*/
 }
