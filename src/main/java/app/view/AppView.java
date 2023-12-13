@@ -12,6 +12,8 @@ import javafx.scene.shape.Line;
 import javafx.scene.text.Font;
 import javafx.stage.Screen;
 
+import static app.view.managers.ArtworksManager.showArtworkManager;
+
 
 public class AppView extends BorderPane {
 
@@ -97,6 +99,11 @@ public class AppView extends BorderPane {
                             MenuItem itemManageUsers = new MenuItem("Manage Users");
                             MenuItem itemManageSales = new MenuItem("Manage Sales");
                             menuForButtonOptions.setMinSize(50,15);
+
+                    // * ----------------- * SETONACTION MENU * ----------------- *
+                            itemManageArtworks.setOnAction(event -> {
+                                showArtworkManager();
+                            });
 
                 tabs.getChildren().addAll(buttonArtworksTab, buttonShowsTab, buttonGalleriesTab, buttonSlideshowTab, menuForButtonOptions);
                 tabs.setAlignment(Pos.TOP_RIGHT);

@@ -119,7 +119,7 @@ public class LandingPage extends BorderPane {
         centerBorderPane.setPrefWidth(Screen.getPrimary().getVisualBounds().getWidth()-55);
         centerBorderPane.setPrefHeight(3000);
         centerBorderPane.setStyle("-fx-background-color: lightgray;");
-        centerBorderPane.setAlignment(Pos.CENTER);
+       centerBorderPane.setAlignment(Pos.CENTER);
 
         ScrollPane scrollPane = new ScrollPane(centerBorderPane);
         scrollPane.setMaxWidth(Screen.getPrimary().getVisualBounds().getWidth());

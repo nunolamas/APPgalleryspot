@@ -30,7 +30,7 @@ public class Thumbnails extends BorderPane{
 
     public VBox doThumbnails() {
 
-            VBox thumbnail = new VBox(10);
+            VBox thumbnail = new VBox(1);
 
             DropShadow dropShadow = new DropShadow();
             dropShadow.setOffsetY(3.0);
@@ -55,22 +55,22 @@ public class Thumbnails extends BorderPane{
             //clickableThumbnail.setOnAction(e -> showExploreArtworks());
 
             Hyperlink artworkTitle = new Hyperlink(" ARTWORK HEX");
-            artworkTitle.setFont(new Font(" Trebuchet MS", 22));
+            artworkTitle.setFont(new Font(" Trebuchet MS", 20));
             //get for the artwork's title
 
             Hyperlink artistName = new Hyperlink(" Artist Ipslon");
-            artistName.setFont(new Font("Trebuchet MS", 15));
+            artistName.setFont(new Font("Trebuchet MS", 14));
             //get for the artwork's artist name
 
             Hyperlink galleryName = new Hyperlink(" Gallery Zi");
-            galleryName.setFont(new Font("Trebuchet MS", 15));
+            galleryName.setFont(new Font("Trebuchet MS", 16));
             //get for the artwork's gallery name
 
             thumbnail.setBackground(background);
 
             HBox priceBox = new HBox(10);
             Text price = new Text("$500.00 ");
-            price.setFont(new Font("Trebuchet MS", 40));
+            price.setFont(new Font("Trebuchet MS", 30));
             //get for the artowrk's price
             price.setTextAlignment(TextAlignment.RIGHT);
 
